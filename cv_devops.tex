@@ -1,0 +1,80 @@
+% Currículo - João Victor Serrano - versão: devops
+% Compilar: pdflatex cv_devops.tex   (ou xelatex)
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,top=1.2cm,bottom=1cm,left=1.8cm,right=1.8cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\definecolor{navy}{HTML}{14325C}
+\definecolor{gray}{HTML}{444444}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.02}
+\titleformat{\section}{\bfseries\color{navy}\fontsize{10}{12}\selectfont}{}{0pt}{}[{\color{navy}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+\setlist[itemize]{leftmargin=11pt,itemsep=0.5pt,topsep=1pt,parsep=0pt,partopsep=0pt,label=\textbullet}
+\newcommand{\entry}[2]{\vspace{2pt}\noindent\textbf{#1}\hfill{\color{gray}#2}\par}
+\newcommand{\projtitle}[2]{\vspace{2pt}\noindent\textbf{#1} {\color{gray}\textperiodcentered{} #2}\par}
+\newcommand{\skill}[2]{\noindent\textbf{#1} #2\par}
+
+\begin{document}
+\begin{center}
+  {\bfseries\color{navy}\fontsize{19}{22}\selectfont JOÃO VICTOR SERRANO}\\[2pt]
+  {\color{gray}\fontsize{10}{12}\selectfont DevOps \textperiodcentered{} Cloud \textperiodcentered{} CI/CD \textperiodcentered{} Contêineres \textperiodcentered{} Observabilidade}\\[3pt]
+  {\color{gray}\fontsize{8.6}{10.5}\selectfont Marília, São Paulo, Brasil \textbar\ (14) 99804-7451 \textbar\ \href{mailto:joaovictorserrano@outlook.com}{joaovictorserrano@outlook.com}\\
+  \href{https://www.linkedin.com/in/joao-victor-serrano-mk03}{linkedin.com/in/joao-victor-serrano-mk03} \textbar\ \href{https://github.com/JoaoVSerrano}{github.com/JoaoVSerrano}}
+\end{center}
+\section*{PERFIL PROFISSIONAL}
+Estudante de Sistemas Inteligentes (4º Termo – Fatec Pompéia) e estagiário de Desenvolvimento Fullstack na Rodojacto. Construí de ponta a ponta uma aplicação em microsserviços com Docker Compose, pipeline CI/CD (GitHub Actions, GHCR e deploy contínuo no Portainer), observabilidade com Prometheus e Grafana e verificações de saúde reais. Interesse em plataformas de entrega, automação e confiabilidade, com base em Linux e desenvolvimento back-end.
+
+\section*{COMPETÊNCIAS TÉCNICAS}
+\skill{Contêineres:}{Docker (multi-stage) \textperiodcentered{} Docker Compose \textperiodcentered{} Portainer \textperiodcentered{} GitHub Container Registry \textperiodcentered{} redes e volumes}
+\skill{CI/CD:}{GitHub Actions \textperiodcentered{} testes automatizados (pytest) \textperiodcentered{} deploy contínuo via webhook \textperiodcentered{} smoke tests}
+\skill{Observabilidade:}{Prometheus \textperiodcentered{} Grafana \textperiodcentered{} healthchecks e readiness \textperiodcentered{} logs de auditoria em Redis Streams}
+\skill{Nuvem e dados:}{Railway \textperiodcentered{} Supabase \textperiodcentered{} MinIO (S3) \textperiodcentered{} MariaDB \textperiodcentered{} PostgreSQL \textperiodcentered{} Redis}
+\skill{Sistemas:}{Linux (Ubuntu) \textperiodcentered{} Git \textperiodcentered{} GitHub \textperiodcentered{} SDKMAN \textperiodcentered{} adb}
+\skill{Linguagens:}{Python \textperiodcentered{} Java \textperiodcentered{} JavaScript \textperiodcentered{} TypeScript \textperiodcentered{} SQL \textperiodcentered{} C}
+
+\section*{EXPERIÊNCIA PROFISSIONAL}
+\entry{Estagiário de Desenvolvimento Fullstack \textperiodcentered{} Rodojacto}{Out 2026 – Atual}
+\begin{itemize}
+  \item Desenvolvimento da nova plataforma da empresa (site e aplicativo), no setor de Qualidade, Processos e Tecnologia.
+  \item Ambiente de desenvolvimento com Docker, MySQL, SDKMAN, Node (nvm/fnm) e adb, e capacitação na stack Angular, Ionic, Java, Spring Boot, Kotlin e Go.
+\end{itemize}
+\entry{Aprendiz – Gestão e Controle de Patrimônio \textperiodcentered{} Jacto}{Jan 2026 – Out 2026}
+\begin{itemize}
+  \item Gestão da base de dados e de planilhas patrimoniais do grupo Jacto, com foco na integridade das informações.
+\end{itemize}
+\entry{Participante – Inovaskill (Apoio em IA) \textperiodcentered{} Fatec Pompéia}{Mar 2025 – Nov 2025}
+\begin{itemize}
+  \item Estruturação de bases de dados para treinamento de modelos de IA e apoio a soluções para empresas parceiras.
+\end{itemize}
+
+\section*{PROJETOS EM DESTAQUE}
+\projtitle{Catálogo de Filmes (Tom Hanks)}{Docker \textperiodcentered{} GitHub Actions \textperiodcentered{} Portainer \textperiodcentered{} Prometheus \textperiodcentered{} Grafana}
+\begin{itemize}
+  \item Orquestração de 8 serviços em contêineres com Docker Compose, rede bridge dedicada com sub-rede fixa, apenas gateway e monitoramento publicados e variáveis obrigatórias com falha rápida.
+  \item Pipeline CI/CD: testes com pytest, build com Docker Buildx e cache, publicação de imagens no GHCR (tags por SHA e latest), deploy via webhook do Portainer e smoke test em /api/health.
+  \item Observabilidade com Prometheus e dashboards Grafana provisionados, healthchecks que verificam as dependências (retorno 503 quando indisponíveis) e auditoria em Redis Streams com retenção limitada.
+  \item Projeto da disciplina de Computação em Nuvem (Fatec Pompéia).
+\end{itemize}
+\projtitle{PWA de Controle Industrial e Logístico (protótipo)}{Railway \textperiodcentered{} Supabase \textperiodcentered{} React \textperiodcentered{} Python}
+\begin{itemize}
+  \item Aplicação publicada no Railway com banco de dados no Supabase, com telemetria e chatbot funcionais.
+\end{itemize}
+
+\section*{FORMAÇÃO ACADÊMICA}
+\entry{Tecnólogo em Sistemas Inteligentes – Fatec Pompéia – Shunji Nishimura (4º Termo)}{Fev 2025 – Presente}
+\entry{Ensino Médio – Colégio Bezerra de Menezes}{Concluído em 2024}
+{\color{gray}Disciplina relevante: Computação em Nuvem}
+
+\section*{IDIOMAS E CERTIFICAÇÕES}
+Inglês – Intermediário (B1/B2), certificação TOEIC \textperiodcentered{} Português – Nativo
+\end{document}

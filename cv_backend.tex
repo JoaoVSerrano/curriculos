@@ -1,0 +1,84 @@
+% Currículo - João Victor Serrano - versão: backend
+% Compilar: pdflatex cv_backend.tex   (ou xelatex)
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,top=1.2cm,bottom=1cm,left=1.8cm,right=1.8cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\definecolor{navy}{HTML}{14325C}
+\definecolor{gray}{HTML}{444444}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.02}
+\titleformat{\section}{\bfseries\color{navy}\fontsize{10}{12}\selectfont}{}{0pt}{}[{\color{navy}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+\setlist[itemize]{leftmargin=11pt,itemsep=0.5pt,topsep=1pt,parsep=0pt,partopsep=0pt,label=\textbullet}
+\newcommand{\entry}[2]{\vspace{2pt}\noindent\textbf{#1}\hfill{\color{gray}#2}\par}
+\newcommand{\projtitle}[2]{\vspace{2pt}\noindent\textbf{#1} {\color{gray}\textperiodcentered{} #2}\par}
+\newcommand{\skill}[2]{\noindent\textbf{#1} #2\par}
+
+\begin{document}
+\begin{center}
+  {\bfseries\color{navy}\fontsize{19}{22}\selectfont JOÃO VICTOR SERRANO}\\[2pt]
+  {\color{gray}\fontsize{10}{12}\selectfont Desenvolvedor Backend \textperiodcentered{} APIs REST \textperiodcentered{} Microsserviços \textperiodcentered{} Python e Java}\\[3pt]
+  {\color{gray}\fontsize{8.6}{10.5}\selectfont Marília, São Paulo, Brasil \textbar\ (14) 99804-7451 \textbar\ \href{mailto:joaovictorserrano@outlook.com}{joaovictorserrano@outlook.com}\\
+  \href{https://www.linkedin.com/in/joao-victor-serrano-mk03}{linkedin.com/in/joao-victor-serrano-mk03} \textbar\ \href{https://github.com/JoaoVSerrano}{github.com/JoaoVSerrano}}
+\end{center}
+\section*{PERFIL PROFISSIONAL}
+Estudante de Sistemas Inteligentes (4º Termo – Fatec Pompéia) e estagiário de Desenvolvimento Fullstack na Rodojacto, em preparação para atuar no back-end da nova plataforma da empresa. Experiência prática em APIs REST com Python e Flask e em back-end Java, com autenticação (sessões, JWT e Google OAuth), controle de acesso por papéis, microsserviços, bancos relacionais e Redis, testes automatizados e CI/CD com Docker. Foco em arquitetura limpa, segurança e qualidade de software.
+
+\section*{COMPETÊNCIAS TÉCNICAS}
+\skill{Linguagens:}{Python \textperiodcentered{} Java \textperiodcentered{} SQL \textperiodcentered{} JavaScript \textperiodcentered{} TypeScript \textperiodcentered{} C}
+\skill{Back-end:}{Flask \textperiodcentered{} APIs REST \textperiodcentered{} OpenAPI/Swagger \textperiodcentered{} JWT, sessões e Google OAuth \textperiodcentered{} RBAC \textperiodcentered{} Microsserviços \textperiodcentered{} Webhooks (Stripe) \textperiodcentered{} Spring Boot, Kotlin e Go (em aprendizado)}
+\skill{Dados:}{PostgreSQL \textperiodcentered{} MySQL \textperiodcentered{} MariaDB \textperiodcentered{} Redis (cache e Streams) \textperiodcentered{} Alembic (migrações) \textperiodcentered{} MinIO (S3)}
+\skill{Qualidade:}{pytest \textperiodcentered{} GitHub Actions \textperiodcentered{} Postman \textperiodcentered{} Insomnia}
+\skill{Infraestrutura:}{Docker \textperiodcentered{} Docker Compose \textperiodcentered{} Git \textperiodcentered{} GitHub \textperiodcentered{} Linux (Ubuntu)}
+\skill{Front-end (apoio):}{Angular \textperiodcentered{} React}
+
+\section*{EXPERIÊNCIA PROFISSIONAL}
+\entry{Estagiário de Desenvolvimento Fullstack \textperiodcentered{} Rodojacto}{Out 2026 – Atual}
+\begin{itemize}
+  \item Desenvolvimento da nova plataforma da empresa (site e aplicativo), no setor de Qualidade, Processos e Tecnologia.
+  \item Capacitação para o back-end do projeto (Java, Spring Boot, Kotlin e Go), com orientação da equipe, em ambiente com Docker, MySQL, IntelliJ IDEA e Postman/Insomnia.
+\end{itemize}
+\entry{Aprendiz – Gestão e Controle de Patrimônio \textperiodcentered{} Jacto}{Jan 2026 – Out 2026}
+\begin{itemize}
+  \item Gestão da base de dados e de planilhas patrimoniais de todo o grupo Jacto, garantindo a integridade das informações, além de criação de números de imobilizado, baixas e transferências.
+\end{itemize}
+\entry{Participante – Inovaskill (Apoio em IA) \textperiodcentered{} Fatec Pompéia}{Mar 2025 – Nov 2025}
+\begin{itemize}
+  \item Estruturação de bases de dados para treinamento de modelos de IA e apoio a soluções para empresas parceiras.
+\end{itemize}
+
+\section*{PROJETOS EM DESTAQUE}
+\projtitle{Catálogo de Filmes (Tom Hanks)}{Python/Flask \textperiodcentered{} MariaDB \textperiodcentered{} Redis \textperiodcentered{} Docker \textperiodcentered{} GitHub Actions}
+\begin{itemize}
+  \item Microsserviços de gateway, autenticação, pagamentos e auditoria, com comunicação interna protegida por token e rede isolada no Docker Compose.
+  \item Autenticação com sessões, recuperação de senha com token de uso único e expiração, login Google e RBAC aplicado no servidor.
+  \item Assinaturas Stripe com webhooks e cache de permissões em Redis; persistência em MariaDB com migrações Alembic; auditoria de eventos em Redis Streams; avatares em MinIO (S3).
+  \item Testes automatizados com pytest, documentação OpenAPI/Swagger por serviço validada por testes e pipeline de CI/CD. Projeto da disciplina de Computação em Nuvem (Fatec Pompéia).
+\end{itemize}
+\projtitle{Sistema de Gestão de Transporte Estudantil (Projeto Synapse)}{Java \textperiodcentered{} Angular \textperiodcentered{} PostgreSQL \textperiodcentered{} Docker}
+\begin{itemize}
+  \item Plataforma para a Prefeitura de Pompéia com validação via QR Code, reserva de assentos e rastreamento GPS em tempo real.
+  \item Atuação na integração e na correção de erros entre o back-end em Java e o front-end em Angular. Projeto concluído e apresentado, com interesse da prefeitura em implantá-lo.
+\end{itemize}
+\projtitle{PWA de Controle Industrial e Logístico (protótipo)}{Python \textperiodcentered{} JavaScript \textperiodcentered{} React \textperiodcentered{} Railway \textperiodcentered{} Supabase}
+\begin{itemize}
+  \item Back-end em Python e JavaScript com telemetria e chatbot funcionais, publicado no Railway com banco no Supabase.
+\end{itemize}
+
+\section*{FORMAÇÃO ACADÊMICA}
+\entry{Tecnólogo em Sistemas Inteligentes – Fatec Pompéia – Shunji Nishimura (4º Termo)}{Fev 2025 – Presente}
+\entry{Ensino Médio – Colégio Bezerra de Menezes}{Concluído em 2024}
+
+\section*{IDIOMAS E CERTIFICAÇÕES}
+Inglês – Intermediário (B1/B2), certificação TOEIC \textperiodcentered{} Português – Nativo
+\end{document}

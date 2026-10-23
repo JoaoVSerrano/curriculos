@@ -1,0 +1,90 @@
+% Currículo - João Victor Serrano - versão: fullstack
+% Compilar: pdflatex cv_fullstack.tex   (ou xelatex)
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,top=1.2cm,bottom=1cm,left=1.8cm,right=1.8cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\definecolor{navy}{HTML}{14325C}
+\definecolor{gray}{HTML}{444444}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.02}
+\titleformat{\section}{\bfseries\color{navy}\fontsize{10}{12}\selectfont}{}{0pt}{}[{\color{navy}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+\setlist[itemize]{leftmargin=11pt,itemsep=0.5pt,topsep=1pt,parsep=0pt,partopsep=0pt,label=\textbullet}
+\newcommand{\entry}[2]{\vspace{2pt}\noindent\textbf{#1}\hfill{\color{gray}#2}\par}
+\newcommand{\projtitle}[2]{\vspace{2pt}\noindent\textbf{#1} {\color{gray}\textperiodcentered{} #2}\par}
+\newcommand{\skill}[2]{\noindent\textbf{#1} #2\par}
+
+\begin{document}
+\begin{center}
+  {\bfseries\color{navy}\fontsize{19}{22}\selectfont JOÃO VICTOR SERRANO}\\[2pt]
+  {\color{gray}\fontsize{10}{12}\selectfont Desenvolvedor Fullstack \textperiodcentered{} Backend \textperiodcentered{} DevOps \textperiodcentered{} IA \& Dados}\\[3pt]
+  {\color{gray}\fontsize{8.6}{10.5}\selectfont Marília, São Paulo, Brasil \textbar\ (14) 99804-7451 \textbar\ \href{mailto:joaovictorserrano@outlook.com}{joaovictorserrano@outlook.com}\\
+  \href{https://www.linkedin.com/in/joao-victor-serrano-mk03}{linkedin.com/in/joao-victor-serrano-mk03} \textbar\ \href{https://github.com/JoaoVSerrano}{github.com/JoaoVSerrano}}
+\end{center}
+\section*{PERFIL PROFISSIONAL}
+Estudante de Sistemas Inteligentes (4º Termo – Fatec Pompéia) e estagiário de Desenvolvimento Fullstack na Rodojacto, atuando no desenvolvimento da nova plataforma da empresa (site e aplicativo). Experiência prática com Angular, Python, Java, arquitetura de microsserviços, Docker e CI/CD, além de vivência anterior em tratamento de dados para modelos de IA e em ambiente industrial de grande porte. Foco em arquitetura limpa, qualidade de software e entrega de sistemas reais.
+
+\section*{COMPETÊNCIAS TÉCNICAS}
+\skill{Linguagens:}{Python \textperiodcentered{} Java \textperiodcentered{} C \textperiodcentered{} JavaScript \textperiodcentered{} TypeScript \textperiodcentered{} HTML \textperiodcentered{} CSS}
+\skill{Front-end e mobile:}{Angular \textperiodcentered{} Angular Material \textperiodcentered{} Tailwind CSS \textperiodcentered{} React \textperiodcentered{} Ionic (em aprendizado)}
+\skill{Back-end:}{Flask \textperiodcentered{} APIs REST \textperiodcentered{} JWT e OAuth \textperiodcentered{} RBAC \textperiodcentered{} Microsserviços \textperiodcentered{} Spring Boot, Kotlin e Go (em aprendizado)}
+\skill{Dados:}{PostgreSQL \textperiodcentered{} MySQL \textperiodcentered{} MariaDB \textperiodcentered{} Redis (Streams) \textperiodcentered{} SQL \textperiodcentered{} Alembic}
+\skill{DevOps e nuvem:}{Git \textperiodcentered{} GitHub Actions \textperiodcentered{} Docker \textperiodcentered{} Docker Compose \textperiodcentered{} Portainer \textperiodcentered{} Prometheus \textperiodcentered{} Grafana \textperiodcentered{} MinIO (S3) \textperiodcentered{} Railway \textperiodcentered{} Supabase \textperiodcentered{} Linux (Ubuntu)}
+\skill{Ferramentas:}{VS Code \textperiodcentered{} IntelliJ IDEA \textperiodcentered{} Android Studio \textperiodcentered{} Postman \textperiodcentered{} Insomnia \textperiodcentered{} MySQL Workbench \textperiodcentered{} SDKMAN}
+
+\section*{EXPERIÊNCIA PROFISSIONAL}
+\entry{Estagiário de Desenvolvimento Fullstack \textperiodcentered{} Rodojacto}{Out 2026 – Atual}
+\begin{itemize}
+  \item Desenvolvimento da nova plataforma da empresa (site e aplicativo), no setor de Qualidade, Processos e Tecnologia.
+  \item Capacitação na stack do projeto (Angular, Ionic, Tailwind CSS, Java, Spring Boot, Kotlin e Go), com projetos de estudo em Angular: gerenciador de tarefas (Angular Material e Tailwind CSS) e sistema de mercado (Angular Material).
+\end{itemize}
+\entry{Aprendiz – Gestão e Controle de Patrimônio \textperiodcentered{} Jacto}{Jan 2026 – Out 2026}
+\begin{itemize}
+  \item Apoio ao controle de ativos de todo o grupo Jacto: criação de números de imobilizado, atribuição e envio de plaquetas, baixas e transferências.
+  \item Gestão da base de dados e de planilhas patrimoniais, garantindo a integridade das informações, e esclarecimento de dúvidas sobre os processos.
+\end{itemize}
+\entry{Participante – Inovaskill (Apoio em IA) \textperiodcentered{} Fatec Pompéia}{Mar 2025 – Nov 2025}
+\begin{itemize}
+  \item Tratamento e estruturação de bases de dados para treinamento de modelos de Inteligência Artificial.
+  \item Colaboração no desenvolvimento de soluções tecnológicas para empresas parceiras da instituição.
+\end{itemize}
+
+\section*{PROJETOS EM DESTAQUE}
+\projtitle{Catálogo de Filmes (Tom Hanks)}{Python/Flask \textperiodcentered{} Angular \textperiodcentered{} Docker \textperiodcentered{} Redis \textperiodcentered{} MariaDB \textperiodcentered{} GitHub Actions}
+\begin{itemize}
+  \item Aplicação em microsserviços conteinerizados (gateway, autenticação, pagamentos e auditoria), com Docker Compose e deploy via Portainer.
+  \item Autenticação com recuperação de senha e login Google, controle de acesso por papéis (RBAC) e assinaturas Stripe com webhooks e cache em Redis.
+  \item Pipeline CI/CD (testes com pytest, imagens no GHCR, deploy contínuo), observabilidade com Prometheus e Grafana, auditoria com Redis Streams, avatares em MinIO (S3) e documentação OpenAPI/Swagger. Projeto da disciplina de Computação em Nuvem (Fatec Pompéia).
+\end{itemize}
+\projtitle{Sistema de Gestão de Transporte Estudantil (Projeto Synapse)}{Java \textperiodcentered{} Angular \textperiodcentered{} PostgreSQL \textperiodcentered{} Docker}
+\begin{itemize}
+  \item Plataforma para a Prefeitura de Pompéia com validação via QR Code, reserva de assentos e rastreamento GPS em tempo real.
+  \item Atuação na integração e na correção de erros entre o back-end em Java e o front-end em Angular. Projeto concluído e apresentado, com interesse da prefeitura em implantá-lo.
+\end{itemize}
+\projtitle{PWA de Controle Industrial e Logístico (protótipo)}{React \textperiodcentered{} Python \textperiodcentered{} JavaScript \textperiodcentered{} Railway \textperiodcentered{} Supabase}
+\begin{itemize}
+  \item Interface para supervisão de simulações industriais (Indústria 4.0), com telemetria e chatbot funcionais, publicada no Railway com banco no Supabase.
+\end{itemize}
+\projtitle{Weather Dashboard BR}{Python \textperiodcentered{} Streamlit \textperiodcentered{} Data Visualization}
+\begin{itemize}
+  \item Dashboards interativos de dados meteorológicos em tempo real para o Brasil.
+\end{itemize}
+
+\section*{FORMAÇÃO ACADÊMICA}
+\entry{Tecnólogo em Sistemas Inteligentes – Fatec Pompéia – Shunji Nishimura (4º Termo)}{Fev 2025 – Presente}
+\entry{Técnico em Assistente Administrativo – SENAI Pompéia (curso interrompido)}{Jan 2026 – Out 2026}
+\entry{Ensino Médio – Colégio Bezerra de Menezes}{Concluído em 2024}
+
+\section*{IDIOMAS E CERTIFICAÇÕES}
+Inglês – Intermediário (B1/B2), certificação TOEIC \textperiodcentered{} Português – Nativo \textperiodcentered{} Certificado Inovaskill – Fatec Pompéia (Apoio em IA)
+\end{document}

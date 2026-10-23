@@ -1,0 +1,84 @@
+% Currículo - João Victor Serrano - versão: ia_dados
+% Compilar: pdflatex cv_ia_dados.tex   (ou xelatex)
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,top=1.2cm,bottom=1cm,left=1.8cm,right=1.8cm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\definecolor{navy}{HTML}{14325C}
+\definecolor{gray}{HTML}{444444}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.02}
+\titleformat{\section}{\bfseries\color{navy}\fontsize{10}{12}\selectfont}{}{0pt}{}[{\color{navy}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{5pt}{3pt}
+\setlist[itemize]{leftmargin=11pt,itemsep=0.5pt,topsep=1pt,parsep=0pt,partopsep=0pt,label=\textbullet}
+\newcommand{\entry}[2]{\vspace{2pt}\noindent\textbf{#1}\hfill{\color{gray}#2}\par}
+\newcommand{\projtitle}[2]{\vspace{2pt}\noindent\textbf{#1} {\color{gray}\textperiodcentered{} #2}\par}
+\newcommand{\skill}[2]{\noindent\textbf{#1} #2\par}
+
+\begin{document}
+\begin{center}
+  {\bfseries\color{navy}\fontsize{19}{22}\selectfont JOÃO VICTOR SERRANO}\\[2pt]
+  {\color{gray}\fontsize{10}{12}\selectfont IA \& Dados \textperiodcentered{} Python \textperiodcentered{} SQL \textperiodcentered{} Visualização de Dados}\\[3pt]
+  {\color{gray}\fontsize{8.6}{10.5}\selectfont Marília, São Paulo, Brasil \textbar\ (14) 99804-7451 \textbar\ \href{mailto:joaovictorserrano@outlook.com}{joaovictorserrano@outlook.com}\\
+  \href{https://www.linkedin.com/in/joao-victor-serrano-mk03}{linkedin.com/in/joao-victor-serrano-mk03} \textbar\ \href{https://github.com/JoaoVSerrano}{github.com/JoaoVSerrano}}
+\end{center}
+\section*{PERFIL PROFISSIONAL}
+Estudante de Sistemas Inteligentes (4º Termo – Fatec Pompéia) com experiência em tratamento e estruturação de bases de dados para treinamento de modelos de IA (Inovaskill), gestão de bases e planilhas corporativas em ambiente industrial e desenvolvimento de dashboards e telemetria com Python. Estagiário de Desenvolvimento Fullstack na Rodojacto, o que reforça a base de engenharia de software para levar soluções de dados e IA à produção.
+
+\section*{COMPETÊNCIAS TÉCNICAS}
+\skill{Linguagens:}{Python \textperiodcentered{} SQL \textperiodcentered{} JavaScript \textperiodcentered{} TypeScript \textperiodcentered{} Java \textperiodcentered{} C}
+\skill{Dados e visualização:}{Streamlit \textperiodcentered{} Dashboards interativos \textperiodcentered{} Data Visualization \textperiodcentered{} Tratamento e estruturação de dados para modelos de IA}
+\skill{Bancos de dados:}{PostgreSQL \textperiodcentered{} MySQL \textperiodcentered{} MariaDB \textperiodcentered{} Redis (Streams) \textperiodcentered{} Supabase \textperiodcentered{} Alembic}
+\skill{IA e automação:}{Chatbots \textperiodcentered{} Telemetria de processos industriais \textperiodcentered{} Preparação de bases para treinamento}
+\skill{Engenharia:}{Flask \textperiodcentered{} APIs REST \textperiodcentered{} Docker \textperiodcentered{} Git \textperiodcentered{} GitHub Actions \textperiodcentered{} Linux (Ubuntu)}
+\skill{Observabilidade:}{Prometheus \textperiodcentered{} Grafana (métricas e dashboards)}
+
+\section*{EXPERIÊNCIA PROFISSIONAL}
+\entry{Estagiário de Desenvolvimento Fullstack \textperiodcentered{} Rodojacto}{Out 2026 – Atual}
+\begin{itemize}
+  \item Desenvolvimento da nova plataforma da empresa (site e aplicativo), no setor de Qualidade, Processos e Tecnologia.
+  \item Capacitação na stack do projeto (Angular, Ionic, Java, Spring Boot, Kotlin e Go) para atuar como desenvolvedor fullstack.
+\end{itemize}
+\entry{Aprendiz – Gestão e Controle de Patrimônio \textperiodcentered{} Jacto}{Jan 2026 – Out 2026}
+\begin{itemize}
+  \item Gestão da base de dados e de planilhas patrimoniais de todo o grupo Jacto, garantindo a integridade das informações.
+  \item Controle de ativos do grupo: criação de números de imobilizado, atribuição e envio de plaquetas, baixas e transferências.
+\end{itemize}
+\entry{Participante – Inovaskill (Apoio em IA) \textperiodcentered{} Fatec Pompéia}{Mar 2025 – Nov 2025}
+\begin{itemize}
+  \item Tratamento e estruturação de bases de dados para treinamento de modelos de Inteligência Artificial.
+  \item Colaboração no desenvolvimento de soluções tecnológicas para empresas parceiras da instituição. Certificado emitido pela Fatec.
+\end{itemize}
+
+\section*{PROJETOS EM DESTAQUE}
+\projtitle{Weather Dashboard BR}{Python \textperiodcentered{} Streamlit \textperiodcentered{} Data Visualization}
+\begin{itemize}
+  \item Plataforma de visualização de dados meteorológicos em tempo real para o Brasil, com dashboards interativos.
+\end{itemize}
+\projtitle{PWA de Controle Industrial e Logístico (protótipo)}{React \textperiodcentered{} Python \textperiodcentered{} JavaScript \textperiodcentered{} Railway \textperiodcentered{} Supabase}
+\begin{itemize}
+  \item Interface para supervisão de simulações industriais (Indústria 4.0), com telemetria e chatbot funcionais, publicada no Railway com banco no Supabase.
+\end{itemize}
+\projtitle{Catálogo de Filmes (Tom Hanks)}{Python/Flask \textperiodcentered{} Redis \textperiodcentered{} MariaDB \textperiodcentered{} Prometheus \textperiodcentered{} Grafana}
+\begin{itemize}
+  \item Auditoria de eventos da aplicação em Redis Streams e métricas de serviços em Prometheus e Grafana, com dashboards provisionados.
+  \item Consumo da API do TMDB, persistência em MariaDB com migrações e microsserviços em Docker. Projeto da disciplina de Computação em Nuvem (Fatec Pompéia).
+\end{itemize}
+
+\section*{FORMAÇÃO ACADÊMICA}
+\entry{Tecnólogo em Sistemas Inteligentes – Fatec Pompéia – Shunji Nishimura (4º Termo)}{Fev 2025 – Presente}
+\entry{Ensino Médio – Colégio Bezerra de Menezes}{Concluído em 2024}
+{\color{gray}Disciplinas relevantes: Inteligência Artificial \textperiodcentered{} Business Intelligence e Visualização de Dados \textperiodcentered{} Computação em Nuvem}
+
+\section*{IDIOMAS E CERTIFICAÇÕES}
+Inglês – Intermediário (B1/B2), certificação TOEIC \textperiodcentered{} Português – Nativo \textperiodcentered{} Certificado Inovaskill – Fatec Pompéia (Apoio em IA)
+\end{document}
